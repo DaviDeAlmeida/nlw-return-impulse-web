@@ -3,7 +3,7 @@ interface ButtonProps {
 }
 
 function Button (props: ButtonProps) {
-  return <button className="bg-violet-500 px-4 h-10 rounded">{props.text ?? 'Default'}</button>
+  return <button className="button">{props.text ?? 'Default'}</button>
 }
 
 function App() {

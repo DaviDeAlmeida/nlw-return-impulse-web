@@ -21,6 +21,7 @@ export function FeedbackContentStep ({
     const [screenshot, setScreenshot] = useState<string | null>(null)
     const [comment, setComment] = useState('');
     const [isSendingFeedback, setIsSendingFeedback] = useState(false);
+    const [hasError, setHasError] = useState(false);
 
     const feedbackTypesInfo = feedbackTypes[feedbackType];
 
@@ -28,12 +29,19 @@ export function FeedbackContentStep ({
         event.preventDefault();
 
         setIsSendingFeedback(true);
+        setHasError(false);
 
-        await api.post('feedbacks', {
-            type: feedbackType,
-            comment,
-            screenshot
-        })
+        try {
+            await api.post('feedbacks', {
+                type: feedbackType,
+                comment,
+                screenshot
+            })
+        } catch {
+            setHasError(true);
+            setIsSendingFeedback(false);
+            return;
+        }
 
         setIsSendingFeedback(false);
         onFeedbackSent();
@@ -61,6 +69,11 @@ export function FeedbackContentStep ({
                     placeholder="Conte com detalhes o que está acontecendo..."
                     onChange={event => setComment(event.target.value)}
                 />
+                {hasError && (
+                    <p className="text-xs text-red-400 mt-1" role="alert">
+                        Não foi possível enviar o feedback. Tente novamente.
+                    </p>
+                )}
                 <footer className="flex gap-2 mt-2">  
                     <ScreenshotButton 
                         screenshot={screenshot}

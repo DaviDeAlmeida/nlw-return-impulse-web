@@ -1,7 +1,10 @@
 {
-  "name": "web",
+  "name": "nlw-return-impulse-web",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "Feedget: widget de feedback com captura de tela em React + TypeScript + Tailwind CSS.",
+  "author": "Davi Cardoso",
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",

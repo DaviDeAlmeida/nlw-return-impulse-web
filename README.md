@@ -48,6 +48,7 @@ Projeto desenvolvido durante o **NLW Return (trilha Impulse)** da Rocketseat.
 - **Acessibilidade:** popover com [Headless UI](https://headlessui.com/), com foco gerenciado e fechamento por `Esc`
 - **Responsivo:** ocupa a largura da tela no mobile e vira um card flutuante no desktop
 - **Estados de interface:** loading durante captura e envio, botão desabilitado sem comentário, mensagem de erro se a API falhar
+- **API pré-aquecida:** a página chama `/health` ao carregar, escondendo o *cold start* do plano gratuito
 - **Dark UI** com design tokens próprios no Tailwind (`brand-300`, `brand-500`)
 
 ## 🚀 Tecnologias
@@ -145,5 +146,5 @@ Para publicar o seu:
 ---
 
 <p align="center">
-  Feito por <a href="https://github.com/DaviDeAlmeida"><strong>Davi Cardoso</strong></a> durante o NLW Return · Rocketseat 🚀
+  Feito por <a href="https://github.com/DaviDeAlmeida"><strong>Davi Cardoso</strong></a>
 </p>

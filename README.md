@@ -14,7 +14,7 @@
 </p>
 
 <p align="center">
-  <a href="https://nlw-return-impulse-web.vercel.app"><strong>🔗 Ver demo ao vivo</strong></a>
+  <a href="https://feedget-davidealmeida.vercel.app"><strong>🔗 Ver demo ao vivo</strong></a>
 </p>
 
 <p align="center">
@@ -129,7 +129,7 @@ O fluxo do widget é controlado por estado em `WidgetForm/index.tsx`: cada etapa
 
 ## ☁️ Deploy
 
-O front-end está publicado na **Vercel**: **[nlw-return-impulse-web.vercel.app](https://nlw-return-impulse-web.vercel.app)**
+O front-end está publicado na **Vercel**: **[feedget-davidealmeida.vercel.app](https://feedget-davidealmeida.vercel.app)**
 
 Para publicar o seu:
 
